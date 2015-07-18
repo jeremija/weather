@@ -3,6 +3,15 @@ import sys
 from . import services
 import pytz
 import datetime
+import colorama
+
+
+TEMP_COLORS = [
+    (-100, colorama.Fore.BLUE),
+    (12, colorama.Fore.BLUE + colorama.Style.BRIGHT),
+    (25, colorama.Fore.YELLOW + colorama.Style.BRIGHT),
+    (100, colorama.Fore.RED + colorama.Style.BRIGHT)
+]
 
 
 def parse_args(argv):
