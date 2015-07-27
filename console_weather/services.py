@@ -35,14 +35,14 @@ def fetch_location():
 
     json = r.json()
 
-    if 'city' not in json:
+    if 'latitude' not in json or 'longitude' not in json:
         return None
 
     return {
         'lat': json['latitude'],
         'lng': json['longitude'],
-        'city': json['city'],
-        'country': json['country']
+        'city': json['city'] if 'city' in json else 'Unknown',
+        'country': json['country'] if 'country' in json else 'Unknown'
     }
 
 
