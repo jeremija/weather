@@ -35,6 +35,9 @@ def fetch_location():
 
     json = r.json()
 
+    if 'city' not in json:
+        return None
+
     return {
         'lat': json['latitude'],
         'lng': json['longitude'],
