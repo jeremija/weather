@@ -116,7 +116,7 @@ def print_forecast(forecast, print_hourly=False):
             time = parse_time(hour['time'], tz)
             color, hourly = format_hourly_entry(hour)
             weekday = time.strftime('%a')
-            PRINTER.print(color, '{} {:3d}h{}{}'.format(
+            PRINTER.print(color, '{} {:3d}h{}'.format(
                 weekday, time.hour, hourly))
     else:
         for day in forecast['daily']['data']:
