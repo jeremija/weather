@@ -23,7 +23,7 @@ def parse_args(argv):
     parser.add_argument('-l', '--location', nargs='+',
         help='Location to fetch forecast for. Will try to determine your '
             'location automatically when omitted')
-    parser.add_argument('-i', '--ignore-config',
+    parser.add_argument('-i', '--ignore-config', action='store_true',
         help='Ignores location stored in config and attempts to detect it')
     parser.add_argument('-s', '--save', action='store_true',
         help='Saves location in config (if successful')
